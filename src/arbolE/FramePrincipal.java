@@ -11,6 +11,7 @@ package arbolE;
 public class FramePrincipal extends javax.swing.JFrame {
     
     FrameInterfaz Interfaz;
+    FrameLCD lcd;
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FramePrincipal.class.getName());
 
@@ -21,6 +22,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Interfaz = new FrameInterfaz();
+        lcd = new FrameLCD();
     }
 
     /**
@@ -41,7 +43,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jBtnLCD = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -96,7 +98,8 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jButton5.setText("Cuadruplos");
 
-        jButton6.setText("N Polaca");
+        jBtnLCD.setText("LCD");
+        jBtnLCD.addActionListener(this::jBtnLCDActionPerformed);
 
         jButton7.setText("Optimización");
 
@@ -122,7 +125,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jBtnLCD, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -143,7 +146,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(jBtnLCD))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
@@ -205,6 +208,10 @@ public class FramePrincipal extends javax.swing.JFrame {
         Interfaz.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jBtnLCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLCDActionPerformed
+        lcd.setVisible(true);
+    }//GEN-LAST:event_jBtnLCDActionPerformed
+
     /**|
      * @param args the command line arguments
      */
@@ -231,13 +238,13 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnLCD;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
