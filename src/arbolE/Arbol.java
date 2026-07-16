@@ -38,8 +38,15 @@ public class Arbol {
     int paso;
     //1o Julio
     ArrayList<String> reglasEjecutadas;
+    
+    public String emu86;// 15 JULIO
+    
     //constructor
     public Arbol() {
+        emu86 = "; RODRIGUEZ FLORES IKER GUSTAVO \n"
+                + ".MODEL SMALL \n"
+                + ".STACK \n"
+                + ".DATA \n";
         reglasEjecutadas = new ArrayList<String>();
         arbolNodo = new Stack<Nodo>();
         caracter = new Stack<String>();
@@ -77,7 +84,7 @@ public class Arbol {
         /*
         ** En una pila obtiene el elemento de la cima sin eliminarlo, el pop lo elimina
         */
-        arbolNodo.push(new Nodo(derecho,caracter.pop(),izquierdo));
+        arbolNodo.push(new Nodo(izquierdo,caracter.pop(),derecho));
         if(operador.equals("+")){//el operador es +
             String reglaE = "E.nodo = new Nodo(+,E1.nodo,T.nodo);";
             reglasEjecutadas.add("P"+paso+" " + reglaE);

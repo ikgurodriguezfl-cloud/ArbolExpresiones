@@ -75,7 +75,7 @@ public class ArbolIker {
         /*
         ** En una pila obtiene el elemento de la cima sin eliminarlo, el pop lo elimina
         */
-        arbolNodo.push(new Nodo(derecho,caracter.pop(),izquierdo));
+        arbolNodo.push(new Nodo(izquierdo,caracter.pop(),derecho));
         if(operador.equals("+")){//el operador es +
             String reglaE = "E.nodo = new Nodo(+,E1.nodo,T.nodo);";
             reglasEjecutadas.add("P"+paso+" " + reglaE);

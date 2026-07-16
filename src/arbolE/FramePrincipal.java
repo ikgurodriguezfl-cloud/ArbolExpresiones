@@ -12,10 +12,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     
     FrameInterfaz Interfaz;
     
-    
-    
-    
-    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FramePrincipal.class.getName());
 
     /**
